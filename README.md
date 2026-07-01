@@ -10,7 +10,7 @@ mcp-agentlog/
     ├── 01_ml.ipynb
     └── images/
 ```
-Folders follow the mcpN_Topic naming convention, where "N" is the session number and "Topic" is about what I learned in the session
+Folders follow the ```mcpN_Topic``` naming convention, where "N" is the session number and "Topic" is about what I learned in the session.
 
 ## Tech Stack
 
