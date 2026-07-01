@@ -1,16 +1,16 @@
-# workspace
+# mcp-agentlog
 
 A learning repository for an MCP (Model Context Protocol) based AI Agent bootcamp course.
 
 ## Folder Structure
 ```
-workspace/
-├── Git_GitHub.ipynb      # Git/GitHub basics
-└── MCP#3_MLDL/            # Machine Learning/Deep Learning basics
-    ├── #1_ML.ipynb
+mcp-agentlog/
+├── git_github.ipynb      # Git/GitHub basics
+└── mcp03_mldl/            # Machine Learning/Deep Learning basics
+    ├── 01_ml.ipynb
     └── images/
 ```
-Folders follow the MCP#N_Topic naming convention, where "N" is the session number and "Topic" is about what I learned in the session
+Folders follow the mcpN_Topic naming convention, where "N" is the session number and "Topic" is about what I learned in the session
 
 ## Tech Stack
 
