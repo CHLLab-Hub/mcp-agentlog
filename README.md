@@ -18,7 +18,7 @@ mcp-agentlog/
     ├── 07_파이토치로 구현한 선형회귀.ipynb       # Linear Regression with PyTorch
     ├── 08_파이토치로 구현한 논리회귀.ipynb       # Logistic Regression with PyTorch
     ├── 09_손 글씨 숫자 데이터셋.ipynb            # Handwritten Digit Dataset(MNIST)
-    ├── 10_딥러닝_ 퍼셉트론과 다층 퍼셉트론.ipynb   # Deep Learning: Perceptron and MLP
+    ├── 10_딥러닝 퍼셉트론과 다층 퍼셉트론.ipynb   # Deep Learning: Perceptron and MLP
     ├── 11_CNN.ipynb                        # Convolutional Neural Networks(CNN)
     ├── 12_손 글씨 도형 분류하기.ipynb            # Handwritten Shape Classification
     ├── 13_AlexNet 구현하기.ipynb               # Implementing AlexNet
