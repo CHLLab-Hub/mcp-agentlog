@@ -7,8 +7,8 @@ A learning repository for an MCP (Model Context Protocol) based AI Agent bootcam
 mcp-agentlog/
 ├── git_github.ipynb      # Git/GitHub basics
 └── mcp03_mldl/           # Machine Learning/Deep Learning basics
+    ├── data/
     ├── images/
-    ├── source/
     ├── 01_ml.ipynb
     ├── 02_scikit-learn.ipynb
     ├── 03_주택 임대료 예측 데이터셋.ipynb        # Housing Rent Prediction Dataset
