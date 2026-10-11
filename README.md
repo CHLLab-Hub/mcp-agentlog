@@ -36,6 +36,8 @@ mcp-agentlog/
     ├── 09_PLM.ipynb                         # Pretrained Language Model(BERT)
     ├── 10_ViT.ipynb                         # Vision Transformer(ViT)
     └── 11_멀티모달.ipynb                      # Multimodal Learning(CLIP, DINO, BLIP)
+└── mcp05_agent/           # AI Agent
+    └── 01_Agent.ipynb                       # AI Agent basics(LangGraph, Tool Calling, Web Search)
 ```
 Folders follow the ```mcpN_Topic``` naming convention, where "N" is the session number and "Topic" is about what I learned in the session.
 
@@ -44,3 +46,4 @@ Folders follow the ```mcpN_Topic``` naming convention, where "N" is the session 
 - Python
 - Jupyter Notebook
 - PyTorch, Ultralytics YOLO, Hugging Face Transformers, timm, scikit-learn, OpenCV, Albumentations
+- LangChain, LangGraph, OpenAI API, Tavily
