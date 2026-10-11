@@ -23,6 +23,19 @@ mcp-agentlog/
     ├── 12_손 글씨 도형 분류하기.ipynb            # Handwritten Shape Classification
     ├── 13_AlexNet 구현하기.ipynb               # Implementing AlexNet
     └── 14_에일리언 vs 프레데터.ipynb            # Alien vs Predator Classification
+└── mcp04_multimodal/      # Computer Vision, NLP, and Multimodal Learning
+    ├── 02_opencv/
+    ├── images/
+    ├── 01_컴퓨터 비전.ipynb                    # Computer Vision basics
+    ├── 03_object detection.ipynb            # Object Detection(VOC, YOLO)
+    ├── 04_이안류 CCTV 데이터셋.ipynb            # Rip Current CCTV Dataset(YOLO)
+    ├── 05_자연어 처리 기초.ipynb                # NLP basics
+    ├── 06_RNN.ipynb                         # Recurrent Neural Networks(RNN)
+    ├── 07_LSTM.ipynb                        # Long Short-Term Memory(LSTM)
+    ├── 08_Transformer.ipynb                 # Transformer
+    ├── 09_PLM.ipynb                         # Pretrained Language Model(BERT)
+    ├── 10_ViT.ipynb                         # Vision Transformer(ViT)
+    └── 11_멀티모달.ipynb                      # Multimodal Learning(CLIP, DINO, BLIP)
 ```
 Folders follow the ```mcpN_Topic``` naming convention, where "N" is the session number and "Topic" is about what I learned in the session.
 
@@ -30,3 +43,4 @@ Folders follow the ```mcpN_Topic``` naming convention, where "N" is the session 
 
 - Python
 - Jupyter Notebook
+- PyTorch, Ultralytics YOLO, Hugging Face Transformers, timm, scikit-learn, OpenCV, Albumentations
