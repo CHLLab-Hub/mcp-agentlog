@@ -1,6 +1,6 @@
 # mcp-agentlog
 
-A learning repository for an MCP (Model Context Protocol) based AI Agent bootcamp course.
+A learning repository for an MCP(Model Context Protocol) based AI Agent bootcamp course.
 
 ## Folder Structure
 ```
