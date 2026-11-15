@@ -69,4 +69,4 @@ def delete_memo(memo_id: int):
 
 
 if __name__ == "__main__":
-    uvicorn.run("main:app", host="127.0.0.1", port=8100, reload=False)
+    uvicorn.run("03_main:app", host="127.0.0.1", port=8100, reload=False)
