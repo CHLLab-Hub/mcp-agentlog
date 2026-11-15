@@ -7,6 +7,7 @@ A learning repository for an MCP(Model Context Protocol) based AI Agent bootcamp
 mcp-agentlog/
 ├── git_github.ipynb          # Git/GitHub basics
 ├── mcp03_mldl/               # Machine Learning/Deep Learning basics
+│   ├── data/shape/                      # Handwritten shape images(used in 12)
 │   ├── images/
 │   ├── 01_ml.ipynb
 │   ├── 02_scikit-learn.ipynb

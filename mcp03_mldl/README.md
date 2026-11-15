@@ -2,7 +2,7 @@
 
 ## Data Notes
 
-`data/` is not included in this repository (see [.gitignore](../.gitignore)). To reproduce each notebook, prepare the datasets below.
+`data/` is not included in this repository except `data/shape/` (see [.gitignore](../.gitignore)). To reproduce each notebook, prepare the datasets below.
 
 - **House Rent Prediction Dataset** (used in [03_주택 임대료 예측 데이터셋.ipynb](03_주택%20임대료%20예측%20데이터셋.ipynb))
   Download `House_Rent_Dataset.csv` from Kaggle and place it under `data/`.
@@ -20,4 +20,4 @@
   Download from [Kaggle](https://www.kaggle.com/datasets/pmigdal/alien-vs-predator-images) and place it under `data/alien_vs_predator/`.
 
 - **Shape dataset** (used in [12_손글씨 도형 분류하기.ipynb](12_손글씨%20도형%20분류하기.ipynb))
-  Hand-drawn circle/triangle/X images (300 total). Source not confirmed, and not included in this repository. Place `shape.zip` under `data/`; the notebook extracts it to `data/shape/train` and `data/shape/test` (sub-folders `cir`, `tri`, `x`).
+  Source not confirmed. Small enough (under 1MB) to be tracked directly in this repository under `data/shape/` (already extracted, so the notebook's `shape.zip` extraction cell can be skipped).

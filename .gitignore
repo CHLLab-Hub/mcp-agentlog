@@ -11,7 +11,8 @@ __pycache__/
 .idea/
 
 # Datasets (see each folder's README for download instructions)
-/mcp03_mldl/data/
+/mcp03_mldl/data/*
+!/mcp03_mldl/data/shape/
 /mcp04_multimodal/data/
 
 # Model weights and training outputs
