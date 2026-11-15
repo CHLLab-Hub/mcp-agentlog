@@ -38,6 +38,21 @@ mcp-agentlog/
     └── 11_멀티모달.ipynb                      # Multimodal Learning(CLIP, DINO, BLIP)
 └── mcp05_agent/           # AI Agent
     └── 01_Agent.ipynb                       # AI Agent basics(LangGraph, Tool Calling, Web Search)
+└── mcp06_project/         # Project: MeetMind (AI meeting assistant)
+    ├── docs/
+    │   └── planning.md                      # Project planning(background, goals, scenarios)
+    └── exam/                                # Building-block examples for the project
+        ├── 01_gradio1.py                    # Gradio basics(Interface)
+        ├── 02_gradio2.py                    # Gradio Blocks and Tabs
+        ├── 03_main.py                       # FastAPI memo server
+        ├── 03_app.py                        # Gradio UI calling the FastAPI server
+        ├── 04_memo_chat.py                  # Memo chatbot server(LangGraph + OpenAI)
+        ├── 04_memo_ui.py                    # Gradio chat UI for the memo chatbot
+        ├── 05_Qwen3_test.py                 # Speech recognition from a WAV file(Qwen3-ASR)
+        ├── 06_Qwen3_live.py                 # Live microphone speech recognition(Qwen3-ASR)
+        ├── 07_pyannote.py                   # Speaker enrollment and identification(pyannote)
+        ├── 08_mcp.py                        # Sending messages to Slack(Incoming Webhook)
+        └── 09_sqlite.py                     # Storing memos in SQLite
 ```
 Folders follow the ```mcpN_Topic``` naming convention, where "N" is the session number and "Topic" is about what I learned in the session.
 
@@ -47,3 +62,4 @@ Folders follow the ```mcpN_Topic``` naming convention, where "N" is the session 
 - Jupyter Notebook
 - PyTorch, Ultralytics YOLO, Hugging Face Transformers, timm, scikit-learn, OpenCV, Albumentations
 - LangChain, LangGraph, OpenAI API, Tavily
+- Gradio, FastAPI, SQLite, Qwen3-ASR, pyannote.audio, Slack Incoming Webhook
