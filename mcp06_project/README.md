@@ -1,8 +1,8 @@
 # mcp06_project
 
-**MeetMind** — an AI meeting assistant project. Meetings are created and analyzed in a Gradio UI, recorded speech is transcribed and split by speaker with offline models, and a chatbot answers questions based on saved meeting notes. See [docs/planning.md](docs/planning.md) for the plan.
+**MeetMind** — an AI meeting assistant project. The goal is to create and analyze meetings in a Gradio UI, transcribe recorded speech and split it by speaker with offline models, and answer questions with a chatbot grounded in saved meeting notes. See [docs/planning.md](docs/planning.md) for the plan.
 
-The [exam/](exam/) folder holds small examples, one per building block of the project.
+This folder currently contains the plan and the [exam/](exam/) examples — small, standalone scripts, one per building block of the project (UI, API server, LangGraph chatbot, ASR, speaker identification, Slack, SQLite). The integrated MeetMind app is not included in this repository.
 
 ## Setup Notes
 
@@ -29,7 +29,7 @@ The [exam/](exam/) folder holds small examples, one per building block of the pr
   - `HF_TOKEN`: a [Hugging Face](https://huggingface.co/settings/tokens) access token. Used by `07_pyannote.py` to download the speaker embedding model.
   - `SLACK_WEBHOOK_URL`: a Slack [Incoming Webhook](https://api.slack.com/messaging/webhooks) URL. Used by `08_mcp.py`.
 
-  Optional tuning keys: `ASR_MODEL_PATH` (default `Qwen/Qwen3-ASR-1.7B`), `ASR_LANGUAGE` (default `Korean`), `ASR_DTYPE`, `ASR_MAX_SECONDS`, `ASR_CHUNK_SECONDS`, `ASR_SILENCE_RMS`, `ASR_MIC_DEVICE`, `MIC_DEVICE`, `SPEAKER_EMBEDDING_MODEL`, `SPEAKER_MATCH_THRESHOLD`.
+  Optional tuning keys: `ASR_MODEL_PATH` (default `Qwen/Qwen3-ASR-1.7B`), `ASR_LANGUAGE` (default `Korean`), `ASR_DTYPE`, `ASR_MAX_SECONDS`, `ASR_CHUNK_SECONDS`, `ASR_SILENCE_RMS`, `ASR_MIC_DEVICE`, `SPEAKER_EMBEDDING_MODEL`, `SPEAKER_MATCH_THRESHOLD`.
 
 > API keys, tokens and webhook URLs are personal credentials — never commit `.env`.
 
@@ -40,11 +40,11 @@ Run each command from the `exam/` folder.
 | Example | Command | Address |
 |---|---|---|
 | Gradio basics | `python 01_gradio1.py` / `python 02_gradio2.py` | http://127.0.0.1:7860 / 7861 |
-| FastAPI + Gradio | server `03_main.py`, then UI `python 03_app.py` in another terminal | API :8100, UI :7862 |
+| FastAPI + Gradio | `python 03_main.py`, then `python 03_app.py` in another terminal | API :8100, UI :7862 |
 | Memo chatbot | `python 04_memo_chat.py`, then `python 04_memo_ui.py` in another terminal | API :8200, UI :7863 |
 | ASR from a file | `python 05_Qwen3_test.py <audio.wav>` | — |
 | Live ASR | `python 06_Qwen3_live.py` (`--list-devices` to find the mic) | — |
-| Speaker enrollment | `python 07_pyannote.py add <name>`, then `python 07_pyannote.py enroll <name>` | — |
+| Speaker enrollment | `python 07_pyannote.py add <name>` → `python 07_pyannote.py enroll <name>` → `python 07_pyannote.py listen` (or run without arguments for a menu) | — |
 | Slack message | `python 08_mcp.py <message>` | — |
 | SQLite | `python 09_sqlite.py` (creates `demo.db`) | — |
 

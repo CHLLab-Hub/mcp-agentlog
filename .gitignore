@@ -1,0 +1,21 @@
+# Python / environment
+.venv/
+venv/
+.env
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+
+# Editor
+.vscode/
+.idea/
+
+# Datasets (see each folder's README for download instructions)
+/mcp03_mldl/data/
+/mcp04_multimodal/data/
+
+# Model weights and training outputs
+/mcp04_multimodal/model/
+outputs/
+runs/
+*.pth

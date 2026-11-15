@@ -13,7 +13,7 @@ img_color = cv2.imread("./data/images/candies.png", cv2.IMREAD_COLOR)
 hist_gray = cv2.calcHist([img_gray], [0], None, [256], [0, 256])
 # images: 분석할 이미지 목록
 # channels: 분석할 채널 번호
-# mask: 특정 영역만 분삭할 때 사용, None이면 전체 이미지
+# mask: 특정 영역만 분석할 때 사용, None이면 전체 이미지
 # histSize: 구간(bin)의 개수
 # ranges: 분석할 값의 범위
 

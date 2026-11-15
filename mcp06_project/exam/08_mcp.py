@@ -38,13 +38,13 @@ def send_text(text: str) -> None:
     if not url.startswith("https://"):
         print("SLACK_WEBHOOK_URL이 없습니다.")
         print("프로젝트 루트 .env 에 슬랙 Incoming Webhook 주소를 넣으세요.")
-        print("만드는 순서는 examples/06-mcp/README.md 에 있습니다.")
+        print("웹훅 만드는 방법: https://api.slack.com/messaging/webhooks")
         sys.exit(1)
 
     response = httpx.post(url, json={"text": message}, timeout=20.0)
     if response.status_code >= 400:
         print(f"슬랙이 전송을 거부했습니다 ({response.status_code}).")
-        print("웹훅이 취소됐거나 주소가 잘린 경우입니다. README의 채널 연결부터 다시 만드세요.")
+        print("웹훅이 취소됐거나 주소가 잘린 경우입니다. Slack 앱 설정에서 웹훅을 다시 만드세요.")
         sys.exit(1)
     print("슬랙으로 보냈습니다.")
 

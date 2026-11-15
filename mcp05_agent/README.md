@@ -2,7 +2,7 @@
 
 ## Setup Notes
 
-`.env` and `.venv/` are not included in this repository (see `.gitignore`). To reproduce [01_Agent.ipynb](01_Agent.ipynb), prepare the environment below.
+`.env` and `.venv/` are not included in this repository (see [.gitignore](../.gitignore)). To reproduce [01_Agent.ipynb](01_Agent.ipynb), prepare the environment below.
 
 - **Packages**
   Create a virtual environment (Python 3.12) and install:

@@ -106,7 +106,8 @@ def show_people() -> None:
 
 
 def mic_device():
-    raw = os.getenv("MIC_DEVICE", "").strip()
+    # 06_Qwen3_live.py와 같은 환경 변수(ASR_MIC_DEVICE)로 마이크를 고름
+    raw = os.getenv("ASR_MIC_DEVICE", "").strip()
     return int(raw) if raw else None
 
 

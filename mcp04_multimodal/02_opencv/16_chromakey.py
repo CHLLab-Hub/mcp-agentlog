@@ -34,7 +34,7 @@ while True:
 
     # 결과 프레임은 전경 프레임의 복사본에서 시작
     result = frame1.copy()
-    # green_mask가 흰색인 부분에 배경 영상(frame2)를 복사
+    # green_mask가 흰색인 부분에 배경 영상(frame2)을 복사
     cv2.copyTo(frame2, green_mask, frame1)
 
     cv2.imshow("chromakey", result)

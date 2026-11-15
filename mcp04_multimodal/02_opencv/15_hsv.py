@@ -16,7 +16,7 @@ hsv = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
 lower_blue = (90, 150, 0)
 upper_blue = (130, 255, 255)
 
-# 범위 안에 있는 픽셀은 255(흰색), 범위 밖에 픽셀은 0(검정)인 마스크를 만듦
+# 범위 안에 있는 픽셀은 255(흰색), 범위 밖의 픽셀은 0(검정)인 마스크를 만듦
 blue_mask = cv2.inRange(hsv, lower_blue, upper_blue)
 
 airplane = cv2.imread('./data/images/airplane.bmp')

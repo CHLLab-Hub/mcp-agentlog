@@ -18,7 +18,7 @@ if fps <= 0:
     fps = 30.0
 
 print('출력 크기:', width, 'x', height)
-print('출럭 fps:', fps)
+print('출력 fps:', fps)
 
 # fourcc: 동영상 압축 코덱을 지정하는 4개의 문자 코드
 # AVI 파일

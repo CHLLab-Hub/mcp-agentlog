@@ -58,13 +58,21 @@ def main() -> None:
 
     lines: list[str] = []
     try:
-        with sd.InputStream(
+        stream = sd.InputStream(
             samplerate=sample_rate,
             channels=1,
             dtype="float32",
             device=mic_device,
             blocksize=int(sample_rate * chunk_seconds),
-        ) as stream:
+        )  # 장치를 여는 단계의 오류만 여기서 처리(시작은 아래 with 문에서)
+    except Exception as exc:
+        print(f"마이크를 열지 못했습니다: {exc}")
+        print("장치 목록: python 06_Qwen3_live.py --list-devices")
+        print("다른 마이크를 쓰려면: $env:ASR_MIC_DEVICE=\"1\"")
+        sys.exit(1)
+
+    try:
+        with stream:
             while True:
                 audio, overflowed = stream.read(int(sample_rate * chunk_seconds))
                 wav = np.asarray(audio, dtype=np.float32).reshape(-1)
@@ -84,12 +92,6 @@ def main() -> None:
                 print(f">> {text}")
     except KeyboardInterrupt:
         print("\n종료합니다.")
-
-    except Exception as exc:
-        print(f"마이크를 열지 못했습니다: {exc}")
-        print("장치 목록: python live_mic.py --list-devices")
-        print("다른 마이크를 쓰려면: $env:ASR_MIC_DEVICE=\"1\"")
-        sys.exit(1)
 
     print("\n=== 지금까지의 전사 ===")
     print("\n".join(lines) if lines else "(없음)")

@@ -17,7 +17,7 @@ def peak_normalize(wav: np.ndarray, target: float = 0.9) -> np.ndarray:
     return (wav * (target / peak)).astype(np.float32)
 
 
-# WAV 전체가 아닌 소리가 큰 일정 구간을 짤라주는 함수
+# WAV 전체가 아닌 소리가 큰 일정 구간을 잘라주는 함수
 def loudest_slice(wav: np.ndarray, sr: int, seconds: float, search_seconds: float = 600.0) -> tuple[np.ndarray, float]:
     """앞쪽 search_seconds 안에서 평균 에너지가 가장 큰 구간을 고릅니다."""
     want = int(seconds * sr)
