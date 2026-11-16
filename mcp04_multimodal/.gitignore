@@ -1,0 +1,7 @@
+.venv/
+outputs/
+/data/
+*.pt
+*.pth
+runs/
+model/

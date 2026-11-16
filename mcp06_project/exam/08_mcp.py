@@ -38,7 +38,7 @@ def send_text(text: str) -> None:
     if not url.startswith("https://"):
         print("SLACK_WEBHOOK_URL이 없습니다.")
         print("프로젝트 루트 .env 에 슬랙 Incoming Webhook 주소를 넣으세요.")
-        print("만드는 순서는 examples/06-mcp/README.md 에 있습니다.")
+        print("만드는 방법: https://api.slack.com/messaging/webhooks")
         sys.exit(1)
 
     response = httpx.post(url, json={"text": message}, timeout=20.0)

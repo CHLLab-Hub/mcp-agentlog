@@ -40,7 +40,7 @@ Run each command from the `exam/` folder.
 | Example | Command | Address |
 |---|---|---|
 | Gradio basics | `python 01_gradio1.py` / `python 02_gradio2.py` | http://127.0.0.1:7860 / 7861 |
-| FastAPI + Gradio | server `03_main.py`, then UI `python 03_app.py` in another terminal | API :8100, UI :7862 |
+| FastAPI + Gradio | server `python 03_main.py`, then UI `python 03_app.py` in another terminal | API :8100, UI :7862 |
 | Memo chatbot | `python 04_memo_chat.py`, then `python 04_memo_ui.py` in another terminal | API :8200, UI :7863 |
 | ASR from a file | `python 05_Qwen3_test.py <audio.wav>` | — |
 | Live ASR | `python 06_Qwen3_live.py` (`--list-devices` to find the mic) | — |

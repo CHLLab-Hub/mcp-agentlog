@@ -2,13 +2,19 @@
 
 ## Data Notes
 
-`data/` and `model/` are not included in this repository (see `.gitignore`). To reproduce each notebook, prepare the datasets below.
+`data/` and `model/` are not included in this repository (see [.gitignore](.gitignore)). To reproduce each notebook, prepare the datasets below.
 
 - **VOC2007** (used in [03_object detection.ipynb](03_object%20detection.ipynb))
   Download from the [official PASCAL VOC site](http://host.robots.ox.ac.uk/pascal/VOC/voc2007/) and place it under `data/VOCdevkit/VOC2007`.
 
 - **Rip Current CCTV dataset** (used in [04_이안류 CCTV 데이터셋.ipynb](04_이안류%20CCTV%20데이터셋.ipynb))
   Download from [AI Hub](https://www.aihub.or.kr/aihubdata/data/view.do?currMenu=115&topMenu=100&aihubDataSe=data&dataSetSn=71297) (login/approval required) and place it under `data/Sample/` as referenced by `BASE_DIR` in the notebook.
+
+- **KOSPI daily prices** (used in [06_RNN.ipynb](06_RNN.ipynb))
+  A daily KOSPI index CSV in Yahoo Finance's column format (`Date, Open, High, Low, Close, Adj Close, Volume`, ticker `^KS11`, from 2000). Save it as `data/kospi.csv`.
+
+- **Individual Household Electric Power Consumption** (used in [07_LSTM.ipynb](07_LSTM.ipynb))
+  Download from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/235/individual+household+electric+power+consumption) and place `household_power_consumption.txt` under `data/`.
 
 - **K-MHaS** (used in [09_PLM.ipynb](09_PLM.ipynb))
   Cloned automatically by the notebook itself (`git clone https://github.com/adlnlp/K-MHaS.git`) into `data/K-MHaS`. No manual download needed.
