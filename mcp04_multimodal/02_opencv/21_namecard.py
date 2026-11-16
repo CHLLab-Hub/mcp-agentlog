@@ -11,7 +11,7 @@ h, w = img.shape[:2]
 # 출력 이미지 높이
 dst_h = 500
 
-# 원본 예제의 비율을 그대로 유지합니다.
+# 원본 예제의 비율을 그대로 유지한다.
 # 297 : 210 비율을 이용한 가로 크기 계산
 dst_w = round(dst_h * 297 / 210)
 
@@ -30,7 +30,7 @@ src_quad = np.array([
     [w - 30, 30]
 ], dtype=np.float32)
 
-# 목적지 좌표도 동일한 꼭짓점 순서를 사용해야 합니다.
+# 목적지 좌표도 동일한 꼭짓점 순서를 사용해야 한다.
 dst_quad = np.array([
     [0, 0],
     [0, dst_h - 1],
@@ -43,8 +43,8 @@ drag_src = [False, False, False, False]
 
 def draw_roi(image, corners):
     """
-    사용자가 선택한 네 꼭짓점과 연결선을 화면에 그립니다.
-    원본 이미지를 직접 변경하지 않기 위해 copy()를 사용합니다.
+    사용자가 선택한 네 꼭짓점과 연결선을 화면에 그린다.
+    원본 이미지를 직접 변경하지 않기 위해 copy()를 사용한다.
     """
     preview = image.copy()
 
@@ -103,7 +103,7 @@ def on_mouse(event, x, y, flags, param):
     elif event == cv2.EVENT_MOUSEMOVE:
         for i in range(4):
             if drag_src[i]:
-                # 좌표가 이미지 바깥으로 나가지 않도록 제한합니다.
+                # 좌표가 이미지 바깥으로 나가지 않도록 제한한다.
                 # np.clip(x, 최솟값, 최댓값)
                 new_x = np.clip(x, 0, w - 1)
                 new_y = np.clip(y, 0, h - 1)
@@ -118,7 +118,7 @@ def on_mouse(event, x, y, flags, param):
     # 왼쪽 버튼 UP
     # --------------------------------------------------------
     elif event == cv2.EVENT_LBUTTONUP:
-        # 모든 드래그 상태를 False로 되돌립니다.
+        # 모든 드래그 상태를 False로 되돌린다.
         drag_src = [False, False, False, False]
 
 
@@ -140,7 +140,7 @@ while True:
         cv2.destroyAllWindows()
         raise SystemExit
     elif key in (10, 13):
-        # 운영체제에 따라 Enter 키 값이 10 또는 13일 수 있습니다.
+        # 운영체제에 따라 Enter 키 값이 10 또는 13일 수 있다.
         break
 
 # ------------------------------------------------------------

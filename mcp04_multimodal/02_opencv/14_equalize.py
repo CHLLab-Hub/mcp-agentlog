@@ -14,7 +14,7 @@ ycrcb = cv2.cvtColor(img_color, cv2.COLOR_BGR2YCrCb)
 ycrcb[:, :, 0] = cv2.equalizeHist(ycrcb[:, :, 0]) # ycrcb[높이, 너비, 채널]
 equalized_color = cv2.cvtColor(ycrcb, cv2.COLOR_YCrCb2BGR)
 
-# nomalize(): 현재 최솟값과 최대값을 지정한 범위로 선형적으로 늘림 << equalize()와 비슷한 역할을 할 수 있음
+# normalize(): 현재 최솟값과 최대값을 지정한 범위로 선형적으로 늘림 << equalize()와 비슷한 역할을 할 수 있음
 normalized_gray = cv2.normalize(img_gray, None, 0, 255, cv2.NORM_MINMAX)
 
 # 히스토그램 계산

@@ -1,5 +1,5 @@
 """
-이진화(Binariztion/Binary Thresholding)
+이진화(Binarization/Binary Thresholding)
 이진화는 픽셀 값을 두 그룹으로 나누는 영상 처리 기법
 
 일반적인 8비트 이진 영상: 검정(0), 흰색(255)

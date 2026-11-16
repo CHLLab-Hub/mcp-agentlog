@@ -24,7 +24,7 @@ def on_mouse(event, x, y, flags, param):
             oldx, oldy = x, y
             cv2.imshow("canvas", img)
     elif event == cv2.EVENT_LBUTTONUP:
-        print(f'왼쪽 버튼 땐 좌표: ({x}, {y})')
+        print(f'왼쪽 버튼 뗀 좌표: ({x}, {y})')
 
 # 흰색 배경 이미지 생성
 img = np.full((500, 500, 3), 255, dtype=np.uint8)
