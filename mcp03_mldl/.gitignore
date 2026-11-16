@@ -3,3 +3,4 @@ outputs/
 *.tar.gz
 /data/*
 !/data/shape/
+__pycache__/

@@ -6,3 +6,4 @@ outputs/
 runs/
 model/
 02_opencv/*.avi
+__pycache__/
