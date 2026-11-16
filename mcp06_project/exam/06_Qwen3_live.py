@@ -37,7 +37,7 @@ def main() -> None:
     chunk_seconds = float(os.getenv("ASR_CHUNK_SECONDS", "4"))
     silence_rms = float(os.getenv("ASR_SILENCE_RMS", "0.01"))
     sample_rate = 16000
-    device_index = os.getenv("ASR_MIC_DEVICE", "").strip()
+    device_index = os.getenv("MIC_DEVICE", "").strip()
     mic_device = int(device_index) if device_index else None
 
     print(f"GPU: {torch.cuda.get_device_name(0)}")
@@ -87,8 +87,8 @@ def main() -> None:
 
     except Exception as exc:
         print(f"마이크를 열지 못했습니다: {exc}")
-        print("장치 목록: python live_mic.py --list-devices")
-        print("다른 마이크를 쓰려면: $env:ASR_MIC_DEVICE=\"1\"")
+        print("장치 목록: python 06_Qwen3_live.py --list-devices")
+        print("다른 마이크를 쓰려면: $env:MIC_DEVICE=\"1\"")
         sys.exit(1)
 
     print("\n=== 지금까지의 전사 ===")

@@ -46,4 +46,4 @@ cv2.imshow("canvas", img)
 cv2.setMouseCallback("canvas", on_mouse)
 
 cv2.waitKey(0)
-cv2.destroyAllWindow
+cv2.destroyAllWindows()

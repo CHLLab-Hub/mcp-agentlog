@@ -29,7 +29,7 @@ The [exam/](exam/) folder holds small examples, one per building block of the pr
   - `HF_TOKEN`: a [Hugging Face](https://huggingface.co/settings/tokens) access token. Used by `07_pyannote.py` to download the speaker embedding model.
   - `SLACK_WEBHOOK_URL`: a Slack [Incoming Webhook](https://api.slack.com/messaging/webhooks) URL. Used by `08_mcp.py`.
 
-  Optional tuning keys: `ASR_MODEL_PATH` (default `Qwen/Qwen3-ASR-1.7B`), `ASR_LANGUAGE` (default `Korean`), `ASR_DTYPE`, `ASR_MAX_SECONDS`, `ASR_CHUNK_SECONDS`, `ASR_SILENCE_RMS`, `ASR_MIC_DEVICE`, `MIC_DEVICE`, `SPEAKER_EMBEDDING_MODEL`, `SPEAKER_MATCH_THRESHOLD`.
+  Optional tuning keys: `ASR_MODEL_PATH` (default `Qwen/Qwen3-ASR-1.7B`), `ASR_LANGUAGE` (default `Korean`), `ASR_DTYPE`, `ASR_MAX_SECONDS`, `ASR_CHUNK_SECONDS`, `ASR_SILENCE_RMS`, `MIC_DEVICE` (microphone index for 06 and 07), `SPEAKER_EMBEDDING_MODEL`, `SPEAKER_MATCH_THRESHOLD`.
 
 > API keys, tokens and webhook URLs are personal credentials — never commit `.env`.
 

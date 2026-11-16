@@ -5,3 +5,4 @@ outputs/
 *.pth
 runs/
 model/
+02_opencv/*.avi

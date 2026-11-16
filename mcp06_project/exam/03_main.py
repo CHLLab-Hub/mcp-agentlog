@@ -1,6 +1,5 @@
 # 사용자의 입력을 받아 줄 서버
 from datetime import datetime
-from typing import Optional
 
 from fastapi import FastAPI, HTTPException
 from pydantic import BaseModel, Field

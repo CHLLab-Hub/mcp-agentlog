@@ -29,3 +29,28 @@
 
 - **Model weights** (`model/`)
   `yolo11s.pt` is downloaded automatically by Ultralytics on first use. Trained checkpoints (e.g. `best.pt`, `best_vit_multihead.pth`) are produced by running the training cells and are not included here.
+
+## OpenCV Examples (`02_opencv/`)
+
+Standalone scripts for basic image and video processing with OpenCV. The images and videos they use are included under `02_opencv/data/`, so no download is needed.
+
+- **Packages**
+  ```
+  pip install opencv-python numpy matplotlib
+  ```
+
+- **How to run**
+  The scripts load files with relative paths (`./data/...`), so run them from inside the `02_opencv/` folder. Quote file names that contain spaces.
+  ```
+  cd 02_opencv
+  python 02_image.py
+  python "05_mouse event.py"
+  ```
+
+- **Controls**
+  - Image windows close when any key is pressed.
+  - Video and camera windows close with `Esc`. In `16_chromakey.py`, `Space` pauses and resumes.
+  - `07_camera in.py` and `09_camera out.py` need a webcam.
+
+- **Output files**
+  `08_video out.py` writes `mix.avi` and `09_camera out.py` writes `camera.avi` in the same folder. They are excluded from the repository (see [.gitignore](.gitignore)).

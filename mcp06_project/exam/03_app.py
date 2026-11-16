@@ -12,7 +12,7 @@ def api(method: str, path: str, payload: dict | None = None):
             response = client.request(method, f"{BASE}{path}", json=payload)
     except httpx.ConnectError as exc:
         raise ConnectionError(
-            "FastAPI에 연결하지 못했습니다. 다른 터미널에서 `python main.py`를 먼저 실행하세요."
+            "FastAPI에 연결하지 못했습니다. 다른 터미널에서 `python 03_main.py`를 먼저 실행하세요."
         ) from exc
 
     if response.status_code >= 400:
@@ -122,7 +122,7 @@ with gr.Blocks(title="FastAPI + Gradio") as demo:
         "# Gradio → FastAPI\n"
         "이 화면은 HTML이 아니라 Gradio입니다. 버튼을 누르면 `httpx`가 "
         f"`{BASE}`의 REST API를 호출합니다.\n\n"
-        "먼저 다른 터미널에서 `python app.py`를 실행하세요."
+        "먼저 다른 터미널에서 `python 03_main.py`를 실행하세요."
     )
     status = gr.Markdown()
     check_btn = gr.Button("연결 확인")

@@ -35,7 +35,7 @@ def api(method: str, path: str, payload: dict | None = None, timeout: float = 10
             response = client.request(method, f"{BASE}{path}", json=payload)
     except httpx.ConnectError as exc:
         raise ConnectionError(
-            "FastAPI에 연결하지 못했습니다. 다른 터미널에서 `python memo_chat.py`를 먼저 실행하세요."
+            "FastAPI에 연결하지 못했습니다. 다른 터미널에서 `python 04_memo_chat.py`를 먼저 실행하세요."
         ) from exc
 
     if response.status_code >= 400:
@@ -74,7 +74,7 @@ with gr.Blocks(title="메모 챗봇") as demo:
         "# 메모 챗봇\n"
         "이 화면은 Gradio입니다. 질문을 보내면 `httpx`가 "
         f"`{BASE}/chat` 을 호출하고, FastAPI 안의 LangGraph가 메모를 근거로 답합니다.\n\n"
-        "먼저 다른 터미널에서 `python memo_chat.py`를 실행하세요."
+        "먼저 다른 터미널에서 `python 04_memo_chat.py`를 실행하세요."
     )
     status = gr.Markdown()
     memos = gr.Markdown()

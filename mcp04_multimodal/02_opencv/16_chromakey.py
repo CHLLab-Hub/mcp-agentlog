@@ -1,5 +1,4 @@
 import cv2
-import sys
 
 cap_foreground = cv2.VideoCapture('./data/movies/woman.mp4')
 cap_background = cv2.VideoCapture('./data/movies/sea.mp4')
@@ -35,7 +34,7 @@ while True:
     # 결과 프레임은 전경 프레임의 복사본에서 시작
     result = frame1.copy()
     # green_mask가 흰색인 부분에 배경 영상(frame2)를 복사
-    cv2.copyTo(frame2, green_mask, frame1)
+    result = cv2.copyTo(frame2, green_mask, result)
 
     cv2.imshow("chromakey", result)
     cv2.imshow("mask", green_mask)

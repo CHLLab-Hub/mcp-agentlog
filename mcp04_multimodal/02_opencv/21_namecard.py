@@ -4,7 +4,7 @@ import numpy as np
 img = cv2.imread("./data/images/namecard.jpg")
 
 if img is None:
-    raise FileNotFoundError("./images/namecard.jpg를 불러오지 못했습니다.")
+    raise FileNotFoundError("./data/images/namecard.jpg를 불러오지 못했습니다.")
 
 h, w = img.shape[:2]
 
@@ -81,7 +81,7 @@ def on_mouse(event, x, y, flags, param):
     """
     마우스로 네 꼭짓점을 드래그하는 콜백 함수
     """
-    global src_quad, drag_src
+    global src_quad,drag_src
     # --------------------------------------------------------
     # 왼쪽 버튼 DOWN
     # --------------------------------------------------------
